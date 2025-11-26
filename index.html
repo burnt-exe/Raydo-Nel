@@ -4,136 +4,214 @@
 <meta charset="UTF-8">
 <title>Raydo Matthee – DFIR | Malware Analysis | SOC Engineering</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+    /* ——— GLOBAL ——— */
     body {
-        font-family: Arial, sans-serif;
-        margin: 30px;
-        background: #f7f7f7;
-        color: #222;
+        margin: 0;
+        padding: 0;
+        background: #eef1f5;
+        font-family: "Segoe UI", Roboto, Arial, sans-serif;
+        color: #333;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #0d1a2d;
+        border-left: 6px solid #3a7bd5;
+        padding-left: 10px;
+    }
+
+    p, li {
+        font-size: 15px;
         line-height: 1.6;
     }
-    .container {
-        max-width: 900px;
-        margin: auto;
-        background: #fff;
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+
+    /* ——— HEADER ——— */
+    .header {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        color: #fff;
+        padding: 50px 30px;
+        text-align: center;
     }
-    h1 {
-        font-size: 32px;
-        margin-bottom: 5px;
-        color: #111;
+    .header h1 {
+        font-size: 40px;
+        margin: 0;
+        font-weight: 700;
     }
-    h2 {
-        margin-top: 25px;
+    .header .subtitle {
         font-size: 20px;
-        border-bottom: 2px solid #ddd;
-        padding-bottom: 5px;
+        margin-top: 10px;
+        opacity: 0.9;
     }
-    .sub {
-        font-size: 18px;
-        color: #444;
-        margin-bottom: 20px;
-    }
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
-    ul li::before {
-        content: "• ";
-        color: #444;
-    }
-    .section {
+    .header .links {
         margin-top: 20px;
+        font-size: 15px;
     }
-    .header-links a {
+    .header .links a {
+        color: #fff;
         text-decoration: none;
-        color: #0055aa;
+        transition: 0.2s;
     }
-    .header-links a:hover {
+    .header .links a:hover {
         text-decoration: underline;
+    }
+
+    /* ——— CONTENT CONTAINER ——— */
+    .container {
+        max-width: 950px;
+        margin: -40px auto 50px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    /* ——— SECTION STYLING ——— */
+    .section {
+        margin-bottom: 35px;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    /* ——— HIGHLIGHT BOX ——— */
+    .highlight-box {
+        background: #f7faff;
+        border-left: 4px solid #3a7bd5;
+        padding: 15px 20px;
+        border-radius: 6px;
+        margin-bottom: 25px;
+    }
+
+    /* ——— FOOTER ——— */
+    .footer {
+        text-align: center;
+        font-size: 14px;
+        padding: 20px;
+        color: #777;
     }
 </style>
 </head>
-<body>
-<div class="container">
 
+<body>
+
+<!-- ——— HEADER ——— -->
+<div class="header">
     <h1>Raydo Matthee</h1>
-    <div class="sub">
+    <div class="subtitle">
         Digital Forensics • Incident Response • Malware Analysis • SOC Engineering
     </div>
-
-    <div class="header-links">
-        Johannesburg, South Africa • +27 83 380 7950 • 
-        <a href="mailto:raydo@skunkworks.africa">raydo@skunkworks.africa</a> • 
+    <div class="links">
+        Johannesburg | +27 83 380 7950 | 
+        <a href="mailto:raydo@skunkworks.africa">raydo@skunkworks.africa</a> |
         <a href="https://www.skunkworks.africa" target="_blank">skunkworks.africa</a><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/raydo-matthee" target="_blank">linkedin.com/in/raydo-matthee</a> • 
+        LinkedIn: <a href="https://www.linkedin.com/in/raydo-matthee" target="_blank">linkedin.com/in/raydo-matthee</a> |
         GitHub: <a href="https://github.com/raydo-m" target="_blank">github.com/raydo-m</a>
     </div>
+</div>
 
-    <h2>Professional Summary</h2>
-    <p>
-        Digital Forensics and Incident Response specialist with deep expertise in evidence acquisition, malware analysis, SOC operations, and cyber threat investigations. Experienced in building enterprise-grade detection engineering programs, performing IR aligned with NIST 800-61, and securing hybrid cloud infrastructure across Microsoft, IBM, and multi-cloud ecosystems. Delivers high-impact security advisory and hands-on response support for financial, public-sector, and enterprise environments.
-    </p>
+<!-- ——— MAIN CONTENT ——— -->
+<div class="container">
 
-    <h2>Core Competencies</h2>
-    <ul>
-        <li>Digital Forensics: imaging, triage, chain-of-custody, log forensics, timeline reconstruction</li>
-        <li>Incident Response: containment, eradication, recovery, IR playbooks, threat actor profiling</li>
-        <li>Malware Analysis: static/dynamic analysis, sandboxing, behavioral profiling, YARA rule creation</li>
-        <li>SOC Engineering: SIEM tuning, detection engineering, EDR response, threat hunting</li>
-        <li>Threat Intelligence: IOC enrichment, OSINT investigations, MITRE ATT&CK mapping</li>
-        <li>Cloud Security: Azure, AWS, GCP logging, IAM hardening, telemetry investigation</li>
-        <li>Governance: ISO 27001, NIST CSF, Zero Trust architectures, audit preparation</li>
-    </ul>
+    <!-- SUMMARY -->
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <div class="highlight-box">
+            Digital Forensics and Incident Response specialist with deep expertise in 
+            evidence acquisition, malware triage, SOC operations, detection engineering, and 
+            cyber threat investigations. Delivers enterprise-grade IR aligned to NIST 800-61 and 
+            builds secure hybrid/cloud architectures using Microsoft, IBM, and multi-cloud ecosystems.
+        </div>
+    </div>
 
-    <h2>Key Technologies</h2>
-    <ul>
-        <li>Forensics: FTK, Magnet Axiom, Autopsy, Sleuth Kit, Volatility, Redline, KAPE, Cellebrite</li>
-        <li>Malware/Sandbox: REMnux, Cuckoo Sandbox, Ghidra, IDA Free, PEStudio, ProcMon</li>
-        <li>SOC / SIEM / EDR: Microsoft Sentinel, IBM QRadar, Splunk, Elastic SIEM, Defender XDR, CrowdStrike</li>
-        <li>Network/Packet: Wireshark, Zeek, Suricata, tcpdump, PCAP carving</li>
-        <li>Scripting & Automation: Python, PowerShell, Bash, YARA, SIGMA</li>
-        <li>Cloud & Infra: Azure AD, AWS IAM, GCP SCC, VMware, Proxmox</li>
-    </ul>
+    <!-- CORE COMPETENCIES -->
+    <div class="section">
+        <h2>Core Competencies</h2>
+        <ul>
+            <li>Digital Forensics: imaging, triage, chain-of-custody, log forensics, timeline reconstruction</li>
+            <li>Incident Response: containment, eradication, IR playbooks, threat actor profiling</li>
+            <li>Malware Analysis: static/dynamic analysis, sandboxing, YARA rule creation</li>
+            <li>SOC Engineering: SIEM tuning, detection engineering, EDR investigations, threat hunting</li>
+            <li>Threat Intelligence: IOC correlation, OSINT investigations, ATT&CK mapping</li>
+            <li>Cloud Security: Azure, AWS, GCP logging and identity hardening</li>
+            <li>Compliance: ISO 27001, NIST CSF, Zero Trust implementation</li>
+        </ul>
+    </div>
 
-    <h2>Experience</h2>
-    <strong>Founder & Security Lead – Skunkworks (Pty) Ltd</strong> (2020 – Present)
-    <ul>
-        <li>Leads DFIR investigations, digital evidence handling, malware triage, and breach containment.</li>
-        <li>Builds SOC capabilities, SIEM deployments, and detection engineering pipelines.</li>
-        <li>Architects Zero-Trust controls and secures hybrid cloud/identity ecosystems.</li>
-        <li>Develops DFIR tools, scripts, and automation frameworks for evidence collection.</li>
-        <li>Trains analysts and cyber teams across Microsoft, IBM, Cisco, and advanced security tracks.</li>
-    </ul>
+    <!-- TECHNOLOGIES -->
+    <div class="section">
+        <h2>Key Technologies</h2>
+        <ul>
+            <li>Forensics: FTK, Magnet Axiom, Autopsy, Sleuth Kit, Volatility, Redline, KAPE, Cellebrite</li>
+            <li>Malware Tools: REMnux, Cuckoo Sandbox, Ghidra, IDA Free, PEStudio, ProcMon</li>
+            <li>SOC/SIEM/EDR: Sentinel, QRadar, Splunk, Elastic SIEM, Defender XDR, CrowdStrike</li>
+            <li>Packet/Network: Wireshark, Zeek, Suricata, tcpdump, PCAP carving</li>
+            <li>Automation: Python, PowerShell, Bash, YARA, Sigma</li>
+            <li>Cloud/Infra: Azure AD, AWS IAM, GCP SCC, VMware, Proxmox</li>
+        </ul>
+    </div>
 
-    <strong>Cybersecurity Consultant & Instructor</strong> (2015 – 2020)
-    <ul>
-        <li>Delivered hands-on courses in IR, digital forensics, threat hunting, and malware analysis.</li>
-        <li>Performed forensic investigations and reverse-engineering support for enterprise clients.</li>
-        <li>Implemented IR frameworks aligned to NIST CSF, ISO 27001, POPIA, and GDPR.</li>
-    </ul>
+    <!-- EXPERIENCE -->
+    <div class="section">
+        <h2>Experience</h2>
 
-    <h2>Certifications</h2>
-    <ul>
-        <li>IBM Certified Technical Trainer</li>
-        <li>Microsoft Certified Trainer (MCT)</li>
-        <li>CompTIA Security+, CySA+, Pentest+</li>
-        <li>130+ IBM & Microsoft Professional Credentials (Credly)</li>
-    </ul>
+        <strong>Founder & Security Lead — Skunkworks (Pty) Ltd</strong> (2020 – Present)
+        <ul>
+            <li>Led end-to-end DFIR investigations, digital evidence handling, malware analysis, and breach containment.</li>
+            <li>Built SOC capabilities including SIEM deployments, detection engineering, and threat hunting operations.</li>
+            <li>Developed Zero-Trust security architectures and cloud security baselines for enterprise clients.</li>
+            <li>Authored IR playbooks and trained teams across Microsoft, IBM, and advanced cybersecurity tracks.</li>
+        </ul>
 
-    <h2>Selected Projects</h2>
-    <ul>
-        <li>Designed enterprise DFIR program reducing containment time by 47%.</li>
-        <li>Deployed Microsoft Sentinel with 150+ custom analytics and automated workflows.</li>
-        <li>Built malware analysis lab using REMnux, Cuckoo, and Ghidra for triage & training.</li>
-        <li>Authored 20+ IR playbooks for ransomware, insider threats, BEC, and cloud breaches.</li>
-    </ul>
+        <strong>Cybersecurity Consultant & Technical Instructor</strong> (2015 – 2020)
+        <ul>
+            <li>Delivered hands-on training in IR, forensics, malware analysis, and SOC workflows.</li>
+            <li>Performed forensic investigations, system compromise analysis, and threat actor profiling.</li>
+            <li>Implemented security controls aligned to ISO 27001, NIST CSF, POPIA, and GDPR.</li>
+        </ul>
+    </div>
 
-    <h2>Education</h2>
-    <p>BCom Business Management — University of South Africa (UNISA)</p>
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+            <li>IBM Certified Technical Trainer</li>
+            <li>Microsoft Certified Trainer (MCT)</li>
+            <li>CompTIA Security+, CySA+, Pentest+</li>
+            <li>130+ IBM & Microsoft Credentials (Credly Verified)</li>
+        </ul>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+        <h2>Selected Projects</h2>
+        <ul>
+            <li>Designed DFIR program reducing enterprise containment times by 47%.</li>
+            <li>Deployed Microsoft Sentinel with 150+ custom analytics and automation workflows.</li>
+            <li>Built malware analysis lab with REMnux, Cuckoo, and Ghidra for triage & training.</li>
+            <li>Created 20+ IR playbooks for ransomware, insider threats, cloud breaches, and BEC.</li>
+        </ul>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+        <h2>Education</h2>
+        <p>BCom Business Management — University of South Africa (UNISA)</p>
+    </div>
 
 </div>
+
+<div class="footer">
+    © 2025 Raydo Matthee — Skunkworks (Pty) Ltd
+</div>
+
 </body>
 </html>
